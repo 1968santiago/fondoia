@@ -58,7 +58,7 @@ export default function Sidebar({
   onClose: () => void;
 }) {
   const content = (
-    <div className="flex h-full w-64 flex-col bg-white">
+    <div className="flex h-full w-64 flex-col overflow-y-auto bg-white">
       <div className="flex items-center justify-between px-5 pt-5 pb-4">
         <Brand />
         <button

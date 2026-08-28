@@ -74,7 +74,7 @@ export default function KpiCard({
         </div>
       </div>
       {(delta !== undefined || sub) && (
-        <div className="mt-2.5 flex items-center gap-2 text-xs text-slate-500">
+        <div className="mt-2.5 flex flex-wrap items-center gap-2 text-xs text-slate-500">
           {delta !== undefined && (
             <TrendBadge value={delta} suffix={deltaSuffix} goodWhenRising={deltaGoodWhenRising} />
           )}

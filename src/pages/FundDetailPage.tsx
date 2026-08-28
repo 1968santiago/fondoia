@@ -73,7 +73,7 @@ export default function FundDetailPage() {
         }
       />
 
-      <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-6">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 xl:grid-cols-6">
         <KpiCard label="Patrimonio" value={money(row.patrimonio)} icon={Wallet} tone="brand" />
         <KpiCard label="Inversores" value={row.investors.toLocaleString("es-AR")} icon={Users} tone="positive" />
         <KpiCard label="Valor cuotaparte" value={moneyShort(row.cpv)} icon={Coins} tone="slate" />

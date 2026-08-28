@@ -195,7 +195,7 @@ export default function AnalystPage() {
             </div>
           </Card>
 
-          <Card className="p-4">
+          <Card className="hidden p-4 lg:block">
             <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
               Cómo funciona
             </div>
@@ -207,7 +207,7 @@ export default function AnalystPage() {
             </ul>
           </Card>
 
-          <Card className="p-4">
+          <Card className="hidden p-4 lg:block">
             <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Skills</div>
             <ul className="mt-3 space-y-2.5">
               {SKILLS.map((s) => (
@@ -223,8 +223,7 @@ export default function AnalystPage() {
         <Card className="flex flex-col">
           <div
             ref={scrollRef}
-            className="flex-1 space-y-4 overflow-y-auto px-4 py-5 sm:px-5 scrollbar-thin"
-            style={{ maxHeight: "62vh", minHeight: "380px" }}
+            className="scrollbar-thin max-h-[62vh] min-h-[300px] flex-1 space-y-4 overflow-y-auto px-4 py-5 sm:min-h-[380px] sm:px-5"
           >
             {!messages.length && !busy && (
               <IntroRow fundName={fundName} investorName={investorName} />

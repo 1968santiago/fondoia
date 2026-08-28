@@ -61,7 +61,7 @@ export default function InvestorDetailPage() {
         }
       />
 
-      <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-6">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 xl:grid-cols-6">
         <KpiCard label="Patrimonio en cartera" value={money(detail.total)} icon={Wallet} tone="brand" />
         <KpiCard label="Capital aportado" value={moneyShort(detail.aporteNeto)} icon={PiggyBank} tone="positive" />
         <KpiCard label="Posiciones" value={detail.holdings.length.toString()} icon={Layers} tone="slate" />
