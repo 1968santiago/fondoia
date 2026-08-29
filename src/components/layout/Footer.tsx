@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="mt-12 border-t border-slate-200/70 bg-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-5 lg:px-8">
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3">
             <div className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-brand-600 to-brand-800 text-sm font-bold text-white">
@@ -30,7 +30,7 @@ export default function Footer() {
 
         <FooterCol
           title="Reglas (rules)"
-          items={RULES.map((r) => ({ name: r.name, desc: "Evaluación automática de alertas" }))}
+          items={RULES.map((r) => ({ name: r.name, desc: r.description }))}
         />
 
         <FooterCol
@@ -41,6 +41,19 @@ export default function Footer() {
         <FooterCol
           title="Agentes personalizados"
           items={AGENTS.map((a) => ({ name: a.name, desc: a.role }))}
+        />
+
+        <FooterCol
+          title="LLM utilizado"
+          items={[
+            {
+              name: status.model || "gpt-4o-mini",
+              desc:
+                status.state === "ia"
+                  ? "Modelo de OpenAI consultado en línea desde una Netlify Function; la API key se guarda como variable de entorno, nunca en el código."
+                  : "Modelo de OpenAI (gpt-4o-mini) configurado vía variable de entorno. Sin API key activa, responde el motor local determinístico de demostración.",
+            },
+          ]}
         />
       </div>
 
