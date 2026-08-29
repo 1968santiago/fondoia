@@ -59,8 +59,13 @@ export default function Footer() {
                   : "Motor determinístico local (demostración) · activá la API key en Netlify para usar el LLM"}
             </span>
           </div>
-          <div className="text-slate-400">
-            © {year} Valo FCI · Datos ficticios de uso académico · Sin costo · Sin login
+          <div className="text-right text-slate-400">
+            <div className="font-semibold text-slate-500">
+              Trabajo Práctico Integrador · Módulo Finanzas · Postgrado de Inteligencia Artificial
+              UCEMA 2026
+            </div>
+            <div className="mt-1">MVP de finanzas con agentes IA · Agosto 2026 · Santiago Brandán</div>
+            <div className="mt-1">© {year} Valo FCI · Datos ficticios de uso académico · Sin costo · Sin login</div>
           </div>
         </div>
       </div>
